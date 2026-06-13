@@ -1,16 +1,41 @@
-# React + Vite
+# 🌤️ ClimaAgora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de previsão do tempo em tempo real desenvolvida com React.
 
-Currently, two official plugins are available:
+## 🔗 Deploy
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[https://clima-agora-sable.vercel.app/](https://clima-agora-sable.vercel.app/)
 
-## React Compiler
+## 💡 Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📍 Solicita a localização do usuário via navegador
+- 🌡️ Exibe temperatura atual, sensação térmica, umidade, vento e visibilidade
+- 📅 Previsão para os próximos 6 dias
+- 🕐 Previsão por hora do dia atual
+- 🔍 Busca por qualquer cidade do mundo
+- 🌍 Dados atualizados em tempo real
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- HTML
+- CSS
+
+## 🌐 APIs utilizadas
+
+- [Open-Meteo](https://open-meteo.com/) — dados de clima (temperatura, vento, umidade, visibilidade, previsão diária e por hora)
+- [Nominatim / OpenStreetMap](https://nominatim.openstreetmap.org/) — geolocalização reversa e busca de cidades por nome
+
+## 🚀 Como rodar localmente
+
+```bash
+git clone https://github.com/DaviAfonso0/clima-agora.git
+cd clima-agora
+npm install
+npm run dev
+```
+
+## 📸 Preview
+
+![ClimaAgora](./src/assets/hero.png)
