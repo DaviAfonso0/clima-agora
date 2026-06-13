@@ -1,0 +1,170 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.div-titulo{
+    display: flex;
+    align-items: center;
+    color: white;
+    column-gap: 10px;
+}
+.menu{
+    display: none;
+}
+
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    color: grey;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 12px 40px 12px 40px;
+    border: 1px solid lightgrey;
+    background: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.div-form form input[type="search"]:focus{
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 8px rgba(255,255,255,0.2);
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+}
+
+.search-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: none;
+    border: none;
+    border-left: 1px solid white;
+    cursor: pointer;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-botao{
+    color: grey;
+}
+
+.div-links ul{
+    display: flex;
+    column-gap: 30px;
+    list-style-type: none;
+    color: white;
+}
+
+.div-links li{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.div-links li:hover{
+    background-color: grey;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 5, 5, 0);
+    pointer-events: none;
+    transition: background 0.3s;
+    z-index: 99;
+}
+
+.overlay-ativo {
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: all;
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 260px;
+    background-color: #2626249d;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu-aberto {
+    transform: translateX(0);
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-lateral li {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    transition: .3s;
+}
+
+.menu-lateral li:hover {
+    background-color: grey;
+}
+
+@media (max-width: 1000px){
+    .header{
+        flex-direction: column;
+    }
+    .div-links { 
+        display: none;
+    }
+    .search-form {
+        margin-top: 20px;
+        width: 250px;
+    }
+    .menu{
+        display: inline-block;
+        border: none;
+        color: white;
+        background: none;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 1001px) {
+    .menu-lateral,
+    .overlay {
+        display: none !important;
+    }
+}

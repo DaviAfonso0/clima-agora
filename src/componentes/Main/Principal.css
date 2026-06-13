@@ -1,0 +1,159 @@
+.main{
+     display: grid;
+    grid-template-areas: 
+        "climaAtual climaProx"
+        "climaHora climaHora"
+    ;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: start;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 10px;
+}
+
+.main section{
+    background-color: #30302E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    color: #7e7e7d;
+    min-width: 400px;
+}
+
+.section-clima-atual{
+    grid-area: climaAtual;
+    padding: 30px;
+}
+
+.icone-clima{
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+
+.div-cidade-atual{
+    display: flex;
+    align-items: center;
+    column-gap: 1px;
+}
+
+.titulo-temperatura{
+    font-size: 3rem;
+    color: white;
+}
+.lista-dados-clima{
+    margin-top: 15px;
+    display: flex;
+    list-style-type: none;
+    column-gap: 10px;
+}
+
+.lista-dados-clima li{
+    background-color: #1F1F1E;
+    color: #7e7e7d;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    border-radius: 10px;
+}
+
+.umidade-km{
+    color: white;
+}
+
+.section-clima-prox{
+    grid-area: climaProx;
+    padding: 30px;
+}
+
+.lista-clima-prox{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.lista-clima-prox li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom:  1px solid rgb(167, 166, 166);
+    padding: 10px;
+}
+
+.dias-sem,.titulo-prox-dias{
+    color: #c0c0bf;
+}
+
+.temp-maxima{
+    color: white;
+}
+
+.previsao-por-hora{
+    grid-area: climaHora;
+    padding: 20px;
+}
+
+.lista-clima-hora{
+    margin-top: 10px;
+    display: flex;
+    column-gap: 30px;
+    list-style-type: none;
+}
+
+.lista-clima-hora li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 5px;
+    align-items: center;
+    width: 100px;
+    background-color: #1F1F1E;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.hora-clima{
+    font-size: 0.9rem;
+}
+
+.temp-hora{
+    color: white;
+}
+
+@media (max-width: 1000px){
+    .main{
+        display: grid;
+        grid-template-areas: 
+            "climaAtual"
+            "climaProx"
+            "climaHora"
+        ;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        row-gap: 40px;
+    }
+    .main section{
+        max-width: 400px;
+    }
+
+
+
+    .previsao-por-hora{
+        margin-bottom: 20px;
+    }
+    .previsao-por-hora h4{
+        text-align: center;
+    }
+    .lista-clima-hora{
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 20px;
+    }
+}
